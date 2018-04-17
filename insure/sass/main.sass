@@ -1,0 +1,377 @@
+@import "reset"
+@import "fonts"
+
+$base-color: #1C1B1A
+
+$font-OpenS-R: 'OpenS-Regular', sans-serif
+$font-OpenS-B: 'OpenS-Bold', sans-serif
+$font-OpenS-SB: 'OpenS-SemiBold', sans-serif
+$font-OpenS-L: 'OpenS-Light', sans-serif
+
+%catalog-border
+  border-bottom: 1px solid rgba(28, 27, 26, 0.1)
+
+body
+  background-color: #fff
+  font-family: $font-OpenS-R
+  color: $base-color
+.container
+  width: 100%
+  margin: 0 auto
+  @media screen and (min-width: 1200px)
+    width: 1200px
+    max-width: 1200px
+  @media screen and (max-width: 1199px)
+    padding: 0 60px
+  @media screen and (max-width: 767px)
+    padding: 0 30px
+
+header
+  box-shadow: 0 1px 4px rgba(28, 27, 26, 0.07)
+  nav
+    display: flex
+    .logo
+      align-self: center
+      text-decoration: none
+      font-size: 18px
+      font-family: 'Montserrat', sans-serif
+      line-height: 22px
+      background-image: linear-gradient(to right, #0B3997 2.76%, #2B8AFF 98.34%)
+      color: transparent
+      -webkit-background-clip: text
+      background-clip: text
+      text-transform: uppercase
+      letter-spacing: 0.1em
+  .mobile_menu
+    display: none
+  .header_menu
+    list-style: none
+    display: flex
+    margin-left: 315px
+    li
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+    a
+      display: block
+      color: $base-color
+      opacity: .5
+      font-size: 14px
+      font-family: $font-OpenS-R
+      text-align: center
+      text-decoration: none
+      height: 70px
+      padding: 25px 10px 25px
+      border-bottom: 3px solid transparent
+      transition: all .3s ease
+      &:hover
+        opacity: 1
+        border-bottom-color: #2985F7
+      &.active
+        opacity: 1
+        border-bottom-color: #2985F7
+  @media screen and (max-width: 1199px)
+    nav
+      height: 70px
+      align-items: center
+      position: relative
+      &.is_active
+        .mobile_menu
+          right: 210px
+          position: absolute
+          z-index: 50
+        .header_menu
+          display: flex
+          transform: translateX(0)
+    .mobile_menu
+      display: flex
+      margin-left: auto
+      transition: all .2s ease
+    .header_menu
+      display: none
+      flex-direction: column
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      max-width: 300px
+      overflow: hidden
+      z-index: 5
+      margin-left: 0
+      transform: translateX(-100%)
+      background-color: #fff
+      padding-left: 40px
+      transition: all .3s ease
+      li
+        margin-right: 0
+  @media screen and (max-width: 767px)
+    nav
+      &.is_active
+        .mobile_menu
+          right: 240px
+/*section personal plans*/
+
+.catalog_sort_wrap
+  @extend %catalog-border
+  margin-top: 40px
+  padding-bottom: 10px
+  display: flex
+  align-items: center
+  .catalog_title
+    font-size: 24px
+    line-height: 33px
+  .catalog_filter
+    margin-left: auto
+    display: flex
+    align-items: center
+    .filter_separator
+      position: relative
+      display: block
+      padding: 0 15px
+      &::after
+        content: ''
+        display: block
+        background-color: rgba(28, 27, 26, 0.1)
+        width: 1px
+        height: 30px
+.catalog_content_wrap
+  padding-bottom: 85px
+  margin-top: 30px
+  &.card
+    margin-top: 40px
+    padding-bottom: 0
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .catalog_table_header
+      display: none
+    .catalog_item
+      border: 1px solid rgba(28, 27, 26, 0.1)
+      border-radius: 2px
+      flex-wrap: wrap
+      width: 282px
+      margin-bottom: 40px
+      padding: 30px 0 0
+      &:nth-child(2)
+        padding-top: 30px
+      > div
+        width: 100%
+        .title
+          display: block
+          color: rgba(28, 27, 26, .5)
+          font-size: 14px
+          line-height: 20px
+          text-transform: none
+      .company
+        margin: 0 30px 20px
+      .company_image
+        width: 55px
+        height: 55px
+      .company_name
+        font-size: 20px
+        line-height: 27px
+      .covering, .type, .metal_level, .drugs, .primary_care_visit, .year_deductible
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 10px 0
+        margin: 0 30px
+        @extend %catalog-border
+      .drugs, .primary_care_visit, .year_deductible
+        .title
+          display: flex
+          align-items: center
+          img
+            margin-right: 5px
+      .year_deductible
+        border-bottom: none
+      .price
+        font-size: 36px
+        font-family: $font-OpenS-L
+        text-align: center
+        letter-spacing: 0.02em
+        line-height: 47px
+        margin: 20px 0 30px
+      .actions
+        .overview
+          margin-right: 0
+          border-left: none
+        .buy
+          border-right: none
+        button
+          width: 100%
+          height: 40px
+          border-radius: 0
+          border-bottom: none
+          font-size: 12px
+  .catalog_table_header
+    font-size: 10px
+    font-family: $font-OpenS-B
+    line-height: 14px
+    text-transform: uppercase
+    display: flex
+    align-items: flex-start
+    .primary_care_visit, .year_deductible
+      white-space: pre-line
+    > div
+      letter-spacing: 0.05em
+      opacity: .4
+  .company
+    width: 180px
+  .covering
+    width: 114px
+  .type
+    width: 107px
+    text-transform: uppercase
+  .metal_level
+    width: 175px
+  .drugs
+    width: 88px
+  .primary_care_visit
+    width: 116px
+  .year_deductible
+    width: 118px
+  .price
+    width: 120px
+  .catalog_item
+    @extend %catalog-border
+    padding: 20px 0
+    font-size: 14px
+    line-height: 19px
+    display: flex
+    align-items: center
+    &:nth-child(2)
+      padding-top: 18px
+      .metal_color
+        background-color: #808080
+    &:nth-child(3)
+      .metal_color
+        background-color: #98B1B5
+    &:nth-child(4)
+      .metal_color
+        background-color: #E79124
+    &:nth-child(5)
+      .metal_color
+        background-color: #963C11
+    &:nth-child(6)
+      .metal_color
+        background-color: #CA1D25
+    &:nth-child(7)
+      .metal_color
+        background-color: #808080
+    &:nth-child(8)
+      .metal_color
+        background-color: #E79124
+    &:nth-child(9)
+      .metal_color
+        background-color: #CA1D25
+    .company
+      display: flex
+    .company_image
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      margin-right: 20px
+      opacity: .9
+    .company_name
+      line-height: 20px
+    .company_rate
+      span
+        display: inline-block
+        background: url('../images/star-rate.png') no-repeat
+        background-position: -0 -0
+        height: 11px
+        width: 12px
+        &.active
+          background-position: -12px -0px
+        &:hover
+          background-position: -12px -0px
+    .covering, .type, .metal_level, .drugs, .primary_care_visit, .year_deductible
+      .title
+        display: none
+    .type, .metal_level
+      p:not(.title)
+        display: flex
+        align-items: center
+      img
+        margin-left: 5px
+    .metal_level
+      span
+        display: inline-block
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        margin-right: 5px
+    .actions
+      display: flex
+      button
+        text-transform: uppercase
+        font-size: 10px
+        font-family: $font-OpenS-SB
+        letter-spacing: 0.07em
+        border-radius: 4px
+        height: 30px
+        border: 1px solid transparent
+      .overview
+        width: 109px
+        background-color: #fff
+        border-color: rgba(28, 27, 26, 0.1)
+        color: #2985F7
+        margin-right: 5px
+      .buy
+        width: 68px
+        background-color: #2985F7
+        border-color: #2985F7
+        color: #fff
+
+.personal_plans
+  @media screen and (max-width: 1199px)
+    .catalog_filter
+      display: none
+    .catalog_content_wrap
+      padding: 0 30px
+  @media screen and (max-width: 767px)
+    .catalog_content_wrap.card
+      padding: 0 17px
+      .catalog_item
+        width: 100%
+
+footer
+  border-top: 1px solid rgba(28, 27, 26, 0.1)
+  .footer_container
+    display: flex
+    align-items: center
+    height: 79px
+  .copyright
+    margin-right: 30px
+    p
+      font-size: 12px
+      line-height: 16px
+      color: #000
+      opacity: .7
+  .footer_info_menu
+    list-style-type: none
+    display: flex
+    li
+      margin-right: 30px
+      &:last-child
+        margin-right: 0
+    a
+      display: block
+      font-size: 12px
+      font-family: $font-OpenS-R
+      line-height: 16px
+      color: rgba(0, 0, 0, .7)
+      opacity: .7
+      text-decoration: none
+  @media screen and (max-width: 1199px)
+    .footer_info_menu
+      display: none
+    .copyright
+      margin-right: 0
+  @media screen and (max-width: 767px)
+    .footer_container
+      padding: 0
+      justify-content: center
+

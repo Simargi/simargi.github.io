@@ -1,0 +1,678 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+blockquote, body, caption, dd, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, label, legend, li, object, ol, p, pre,
+span, strong, table, tbody, td, tfoot, th, thead, tr, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:focus, a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'OpenS-Regular';
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenS-Bold';
+  src: url("../fonts/OpenSans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenS-Light';
+  src: url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'OpenS-SemiBold';
+  src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+.catalog_sort_wrap, .catalog_content_wrap.card .catalog_item .covering, .catalog_content_wrap.card .catalog_item .type, .catalog_content_wrap.card .catalog_item .metal_level, .catalog_content_wrap.card .catalog_item .drugs, .catalog_content_wrap.card .catalog_item .primary_care_visit, .catalog_content_wrap.card .catalog_item .year_deductible, .catalog_content_wrap .catalog_item {
+  border-bottom: 1px solid rgba(28, 27, 26, 0.1);
+}
+
+body {
+  background-color: #fff;
+  font-family: "OpenS-Regular", sans-serif;
+  color: #1C1B1A;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+header {
+  box-shadow: 0 1px 4px rgba(28, 27, 26, 0.07);
+}
+
+header nav {
+  display: flex;
+}
+
+header nav .logo {
+  align-self: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+  background-image: linear-gradient(to right, #0B3997 2.76%, #2B8AFF 98.34%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+header .mobile_menu {
+  display: none;
+}
+
+header .header_menu {
+  list-style: none;
+  display: flex;
+  margin-left: 315px;
+}
+
+header .header_menu li {
+  margin-right: 20px;
+}
+
+header .header_menu li:last-child {
+  margin-right: 0;
+}
+
+header .header_menu a {
+  display: block;
+  color: #1C1B1A;
+  opacity: .5;
+  font-size: 14px;
+  font-family: "OpenS-Regular", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  height: 70px;
+  padding: 25px 10px 25px;
+  border-bottom: 3px solid transparent;
+  transition: all .3s ease;
+}
+
+header .header_menu a:hover {
+  opacity: 1;
+  border-bottom-color: #2985F7;
+}
+
+header .header_menu a.active {
+  opacity: 1;
+  border-bottom-color: #2985F7;
+}
+
+@media screen and (max-width: 1199px) {
+  header nav {
+    height: 70px;
+    align-items: center;
+    position: relative;
+  }
+  header nav.is_active .mobile_menu {
+    right: 210px;
+    position: absolute;
+    z-index: 50;
+  }
+  header nav.is_active .header_menu {
+    display: flex;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  header .mobile_menu {
+    display: flex;
+    margin-left: auto;
+    transition: all .2s ease;
+  }
+  header .header_menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    z-index: 5;
+    margin-left: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    background-color: #fff;
+    padding-left: 40px;
+    transition: all .3s ease;
+  }
+  header .header_menu li {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header nav.is_active .mobile_menu {
+    right: 240px;
+  }
+}
+
+/*section personal plans*/
+.catalog_sort_wrap {
+  margin-top: 40px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog_sort_wrap .catalog_title {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.catalog_sort_wrap .catalog_filter {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.catalog_sort_wrap .catalog_filter .filter_separator {
+  position: relative;
+  display: block;
+  padding: 0 15px;
+}
+
+.catalog_sort_wrap .catalog_filter .filter_separator::after {
+  content: '';
+  display: block;
+  background-color: rgba(28, 27, 26, 0.1);
+  width: 1px;
+  height: 30px;
+}
+
+.catalog_content_wrap {
+  padding-bottom: 85px;
+  margin-top: 30px;
+}
+
+.catalog_content_wrap.card {
+  margin-top: 40px;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog_content_wrap.card .catalog_table_header {
+  display: none;
+}
+
+.catalog_content_wrap.card .catalog_item {
+  border: 1px solid rgba(28, 27, 26, 0.1);
+  border-radius: 2px;
+  flex-wrap: wrap;
+  width: 282px;
+  margin-bottom: 40px;
+  padding: 30px 0 0;
+}
+
+.catalog_content_wrap.card .catalog_item:nth-child(2) {
+  padding-top: 30px;
+}
+
+.catalog_content_wrap.card .catalog_item > div {
+  width: 100%;
+}
+
+.catalog_content_wrap.card .catalog_item > div .title {
+  display: block;
+  color: rgba(28, 27, 26, 0.5);
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: none;
+}
+
+.catalog_content_wrap.card .catalog_item .company {
+  margin: 0 30px 20px;
+}
+
+.catalog_content_wrap.card .catalog_item .company_image {
+  width: 55px;
+  height: 55px;
+}
+
+.catalog_content_wrap.card .catalog_item .company_name {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.catalog_content_wrap.card .catalog_item .covering, .catalog_content_wrap.card .catalog_item .type, .catalog_content_wrap.card .catalog_item .metal_level, .catalog_content_wrap.card .catalog_item .drugs, .catalog_content_wrap.card .catalog_item .primary_care_visit, .catalog_content_wrap.card .catalog_item .year_deductible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0 30px;
+}
+
+.catalog_content_wrap.card .catalog_item .drugs .title, .catalog_content_wrap.card .catalog_item .primary_care_visit .title, .catalog_content_wrap.card .catalog_item .year_deductible .title {
+  display: flex;
+  align-items: center;
+}
+
+.catalog_content_wrap.card .catalog_item .drugs .title img, .catalog_content_wrap.card .catalog_item .primary_care_visit .title img, .catalog_content_wrap.card .catalog_item .year_deductible .title img {
+  margin-right: 5px;
+}
+
+.catalog_content_wrap.card .catalog_item .year_deductible {
+  border-bottom: none;
+}
+
+.catalog_content_wrap.card .catalog_item .price {
+  font-size: 36px;
+  font-family: "OpenS-Light", sans-serif;
+  text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 47px;
+  margin: 20px 0 30px;
+}
+
+.catalog_content_wrap.card .catalog_item .actions .overview {
+  margin-right: 0;
+  border-left: none;
+}
+
+.catalog_content_wrap.card .catalog_item .actions .buy {
+  border-right: none;
+}
+
+.catalog_content_wrap.card .catalog_item .actions button {
+  width: 100%;
+  height: 40px;
+  border-radius: 0;
+  border-bottom: none;
+  font-size: 12px;
+}
+
+.catalog_content_wrap .catalog_table_header {
+  font-size: 10px;
+  font-family: "OpenS-Bold", sans-serif;
+  line-height: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-start;
+}
+
+.catalog_content_wrap .catalog_table_header .primary_care_visit, .catalog_content_wrap .catalog_table_header .year_deductible {
+  white-space: pre-line;
+}
+
+.catalog_content_wrap .catalog_table_header > div {
+  letter-spacing: 0.05em;
+  opacity: .4;
+}
+
+.catalog_content_wrap .company {
+  width: 180px;
+}
+
+.catalog_content_wrap .covering {
+  width: 114px;
+}
+
+.catalog_content_wrap .type {
+  width: 107px;
+  text-transform: uppercase;
+}
+
+.catalog_content_wrap .metal_level {
+  width: 175px;
+}
+
+.catalog_content_wrap .drugs {
+  width: 88px;
+}
+
+.catalog_content_wrap .primary_care_visit {
+  width: 116px;
+}
+
+.catalog_content_wrap .year_deductible {
+  width: 118px;
+}
+
+.catalog_content_wrap .price {
+  width: 120px;
+}
+
+.catalog_content_wrap .catalog_item {
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(2) {
+  padding-top: 18px;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(2) .metal_color {
+  background-color: #808080;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(3) .metal_color {
+  background-color: #98B1B5;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(4) .metal_color {
+  background-color: #E79124;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(5) .metal_color {
+  background-color: #963C11;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(6) .metal_color {
+  background-color: #CA1D25;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(7) .metal_color {
+  background-color: #808080;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(8) .metal_color {
+  background-color: #E79124;
+}
+
+.catalog_content_wrap .catalog_item:nth-child(9) .metal_color {
+  background-color: #CA1D25;
+}
+
+.catalog_content_wrap .catalog_item .company {
+  display: flex;
+}
+
+.catalog_content_wrap .catalog_item .company_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  opacity: .9;
+}
+
+.catalog_content_wrap .catalog_item .company_name {
+  line-height: 20px;
+}
+
+.catalog_content_wrap .catalog_item .company_rate span {
+  display: inline-block;
+  background: url("../images/star-rate.png") no-repeat;
+  background-position: -0 -0;
+  height: 11px;
+  width: 12px;
+}
+
+.catalog_content_wrap .catalog_item .company_rate span.active {
+  background-position: -12px -0px;
+}
+
+.catalog_content_wrap .catalog_item .company_rate span:hover {
+  background-position: -12px -0px;
+}
+
+.catalog_content_wrap .catalog_item .covering .title, .catalog_content_wrap .catalog_item .type .title, .catalog_content_wrap .catalog_item .metal_level .title, .catalog_content_wrap .catalog_item .drugs .title, .catalog_content_wrap .catalog_item .primary_care_visit .title, .catalog_content_wrap .catalog_item .year_deductible .title {
+  display: none;
+}
+
+.catalog_content_wrap .catalog_item .type p:not(.title), .catalog_content_wrap .catalog_item .metal_level p:not(.title) {
+  display: flex;
+  align-items: center;
+}
+
+.catalog_content_wrap .catalog_item .type img, .catalog_content_wrap .catalog_item .metal_level img {
+  margin-left: 5px;
+}
+
+.catalog_content_wrap .catalog_item .metal_level span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.catalog_content_wrap .catalog_item .actions {
+  display: flex;
+}
+
+.catalog_content_wrap .catalog_item .actions button {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: "OpenS-SemiBold", sans-serif;
+  letter-spacing: 0.07em;
+  border-radius: 4px;
+  height: 30px;
+  border: 1px solid transparent;
+}
+
+.catalog_content_wrap .catalog_item .actions .overview {
+  width: 109px;
+  background-color: #fff;
+  border-color: rgba(28, 27, 26, 0.1);
+  color: #2985F7;
+  margin-right: 5px;
+}
+
+.catalog_content_wrap .catalog_item .actions .buy {
+  width: 68px;
+  background-color: #2985F7;
+  border-color: #2985F7;
+  color: #fff;
+}
+
+@media screen and (max-width: 1199px) {
+  .personal_plans .catalog_filter {
+    display: none;
+  }
+  .personal_plans .catalog_content_wrap {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .personal_plans .catalog_content_wrap.card {
+    padding: 0 17px;
+  }
+  .personal_plans .catalog_content_wrap.card .catalog_item {
+    width: 100%;
+  }
+}
+
+footer {
+  border-top: 1px solid rgba(28, 27, 26, 0.1);
+}
+
+footer .footer_container {
+  display: flex;
+  align-items: center;
+  height: 79px;
+}
+
+footer .copyright {
+  margin-right: 30px;
+}
+
+footer .copyright p {
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  opacity: .7;
+}
+
+footer .footer_info_menu {
+  list-style-type: none;
+  display: flex;
+}
+
+footer .footer_info_menu li {
+  margin-right: 30px;
+}
+
+footer .footer_info_menu li:last-child {
+  margin-right: 0;
+}
+
+footer .footer_info_menu a {
+  display: block;
+  font-size: 12px;
+  font-family: "OpenS-Regular", sans-serif;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: .7;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1199px) {
+  footer .footer_info_menu {
+    display: none;
+  }
+  footer .copyright {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .footer_container {
+    padding: 0;
+    justify-content: center;
+  }
+}
